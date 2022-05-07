@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX009</title>
+    <style>
+        body{
+            height: 100%;
+            height: 100%;
+            background-color: slategray;
+        }
+
+        #principal{
+            margin: 200px auto auto auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <h1>Saiba se você precisa votar esse ano</h1>
+        <label for="idade">Qual a sua idade?:</label>
+        <input type="number" name="idade" id="idade">
+        <input type="button" id="botao" value="Verificar">
+        <h2 id="result"></h2>
+    </div>
+    <script>
+        botao.addEventListener('click', function(){
+            var idade = Number(document.querySelector('#idade').value)
+            var resultado = document.querySelector('h2#result')
+            var botao = document.querySelector('input#botao')
+            if (idade < 16) {
+                resultado.innerText = `Você tem ${idade} anos, portanto não pode votar ainda!`
+            } else if (idade < 18 || idade > 65) {
+                resultado.innerText = `Você tem ${idade} anos, para você o voto é opcional!`
+                
+            } else {
+                resultado.innerHTML = `Você tem ${idade} anos, para você o voto é <strong>OBRIGATÓRIO</strong>!!`
+            }
+            // resultado.innerText = `${idade}`
+        })        
+    </script>
+</body>
+</html>
