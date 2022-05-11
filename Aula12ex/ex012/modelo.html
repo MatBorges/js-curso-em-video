@@ -4,22 +4,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hora do Dia</title>
+        <title>Verifica Idade</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body onload="carregar()">
         <header>
-            <h1 id="titulo">Hora do Dia</h1>
+            <h1 id="titulo">Verifica Idade</h1>
         </header>
         <section>
-            <div id="divhora">
-                <h2 id="hora"></h2>
+            <div>
+                <label for="idade">Qual a sua idade?:</label>
+                <input type="number" name="idade" id="idade" min="0">
+                <p>Sexo:
+                    <label for="masc">Masculino:</label>
+                    <input type="radio" name="masc" id="masc" checked>
+                    <label for="fem">Feminino:</label>
+                    <input type="radio" name="fem" id="fem">
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
             </div>
-            <div id="divimagem">
-                <img id="imagem" src="" alt="">
-            </div>
-            <div id="divmsg">
-                <h3 id="msg"></h3>
+            <div id="result">
+                
             </div>
         </section>
         <footer>

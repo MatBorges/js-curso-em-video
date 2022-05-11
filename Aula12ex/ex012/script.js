@@ -24,3 +24,9 @@ function carregar(){
         document.body.style.background = 'rgb(0, 85, 160)'
     }
 }
+
+function verificar() {    
+    var idade = document.querySelector('#idade')
+    var sexo = document.querySelector('#sexo')
+    
+}
