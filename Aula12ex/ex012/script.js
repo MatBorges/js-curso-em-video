@@ -1,32 +1,49 @@
-function carregar(){
-    var horario = document.querySelector('#hora')
-    var imagem = document.querySelector('#imagem')
-    var msg = document.querySelector('#msg')
+function verificar() { 
+    var res = document.querySelector(`div#res`) 
     var data = new Date()
-    var hora = data.getHours()   
-
-    horario.innerText = `Agora são ${hora} horas`    
-
-    if(hora >= 5 && hora < 12){
-        imagem.src = 'img/manha.jpg'
-        imagem.alt = 'Bom Dia!!'
-        msg.innerText = `Tenha um Bom Dia!!`
-        document.body.style.background = "rgb(255, 240, 158)"
-    }else if(hora >= 12 && hora <= 18){
-        imagem.src = 'img/tarde.jpg'
-        imagem.alt = 'Boa Tarde!!'
-        msg.innerText = `Tenha uma Boa Tarde!!`
-        document.body.style.background = 'rgb(255, 144, 41)'
-    }else{
-        imagem.src = 'img/noite.jpg'
-        imagem.alt = 'Boa Noite!!'
-        msg.innerText = `Tenha uma Boa Noite!!`
-        document.body.style.background = 'rgb(0, 85, 160)'
-    }
-}
-
-function verificar() {    
-    var idade = document.querySelector('#idade')
-    var sexo = document.querySelector('#sexo')
+    var ano = data.getFullYear()
+    var nasc = Number(document.querySelector('input#nasc').value)
     
+    if(nasc <= 0 || nasc > ano){
+        alert('Ano inválido!!')
+    }
+    else{
+        var idade = ano - nasc
+        var sexo = document.getElementsByName('sexo')
+        var genero = ``
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        if(sexo[0].checked){
+            genero = `Homem`
+            if (idade == 0 || idade <= 10) {
+                img.setAttribute('src', 'img/criança-menino.png')
+            }
+            else  if(idade <= 16){
+                img.setAttribute('src', 'img/menino.png')
+            }
+            else if(idade <= 50){
+                img.setAttribute('src', 'img/homem.png')
+            }
+            else{
+                img.setAttribute('src', 'img/senhor.png')
+            }
+        }
+        else if(sexo[1].checked){
+            genero = `Mulher`
+            if (idade == 0 || idade <= 10) {
+                img.setAttribute('src', 'img/criança-menina.png')
+            }
+            else  if(idade <= 16){
+                img.setAttribute('src', 'img/menina.png')
+            }
+            else if(idade <= 50){
+                img.setAttribute('src', 'img/mulher.png')
+            }
+            else{
+                img.setAttribute('src', 'img/senhora.png')
+            }
+        }                
+        res.innerText = `Você é ${genero} com ${idade} anos`
+        res.appendChild(img)        
+    }
 }

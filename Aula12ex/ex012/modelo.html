@@ -7,25 +7,25 @@
         <title>Verifica Idade</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="carregar()">
+    <body>
         <header>
             <h1 id="titulo">Verifica Idade</h1>
         </header>
         <section>
             <div>
-                <label for="idade">Qual a sua idade?:</label>
-                <input type="number" name="idade" id="idade" min="0">
+                <label for="idade">Em que ano você nasceu?:</label>
+                <input type="number" name="nasc" id="nasc" min="0">
                 <p>Sexo:
-                    <label for="masc">Masculino:</label>
-                    <input type="radio" name="masc" id="masc" checked>
-                    <label for="fem">Feminino:</label>
-                    <input type="radio" name="fem" id="fem">
+                    <input type="radio" name="sexo" id="mas" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="sexo" id="Fem">
+                    <label for="fem">Feminino</label>
                 </p>
                 <p>
                     <input type="button" value="Verificar" onclick="verificar()">
                 </p>
             </div>
-            <div id="result">
+            <div id="res">
                 
             </div>
         </section>
