@@ -17,6 +17,13 @@ section{
     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.288);
 }
 
+
+
+#resultado{
+    text-align: center;
+    margin-top: 15px;
+}
+
 footer{
     text-align: center;
     color: aliceblue;

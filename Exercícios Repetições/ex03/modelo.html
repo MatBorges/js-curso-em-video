@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Sequência</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 id="titulo">Modelo</h1>
+        <h1 id="titulo">Sequência</h1>
     </header>
     <section>
         <div>
+            <div id="d-inicio">
+                <label for="inicio" id="l-inicio">Inicio</label>
+                <input type="number" name="inicio" id="inicio">
+            </div>
+            <br>
+            <div id="d-fim">
+                <label for="fim" id="l-fim">Fim</label>
+                <input type="number" name="fim" id="fim">
+            </div>
+            <br>
+            <div id="d-passo">
+                <label for="passo" id="l-passo">Passo</label>
+                <input type="number" name="passo" id="passo">
+            </div>
 
+            <input type="button" value="Contar.." onclick="contar()">            
         </div>
-        <div></div>
-
+        <div id="resultado">            
+            Digite os Dados!!
+        </div#>
     </section>
     <footer>
         <p>&copy;Mateus Borges</p>
