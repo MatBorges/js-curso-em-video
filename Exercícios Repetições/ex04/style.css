@@ -8,13 +8,24 @@ header{
     color: aliceblue;
 }
 
-section{
+section{    
     background-color: aliceblue;
     border-radius: 15px;
     padding: 20px;
     width: 400px;
     margin: auto;
     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.288);
+}
+
+#result{
+    text-align: center;
+    padding: 10px;
+}
+
+select{
+    margin-top: 10px;
+    border: none;
+    overflow: hidden;
 }
 
 footer{
