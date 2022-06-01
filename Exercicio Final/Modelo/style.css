@@ -1,0 +1,36 @@
+body{
+    font: normal 15pt Arial;
+    background-color: deepskyblue;
+}
+
+header{
+    text-align: center;
+    color: aliceblue;
+}
+
+section{
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.288);
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: aliceblue;
+}
+
+#lista{
+    height: 150px;
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#finalizar{
+    margin: auto;
+}
